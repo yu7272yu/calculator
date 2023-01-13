@@ -149,3 +149,28 @@ def callback_user(request):
     api = WeixinMpAPI(access_token=token)
     api.template_message_send(json_body=par)
     return HttpResponse("success")
+
+
+
+# 导入socket模块
+# import socket
+# # 创建一个socket , 第一个参数为类型, 第二个参数为套接字类型 ,
+# s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)   # udp套接字 创建完套接字要立马进行关闭,然后在中间写功能,养成习惯
+# # 目标ip地址和端口
+# # HOST = '192.168.100.93'
+# dest_attr = ('192.168.100.93', 12345)
+# # 要发送的数据
+# # send_data = input("请输入要发送的数据:")
+# # 播放
+# meg = "AT+AUDIO1=1,2,1,1\r\n"
+# # 暂停
+# # meg = "AT+AUDIO1=1,0,1,1\r\n"
+
+# # 发送数据到指定的ip上
+# s.sendto(meg.encode('utf-8'), dest_attr)
+# # 等待接收对方返回数据
+# recv_data = s.recvfrom(1024) # 表示最大接收的字节数,此时recv_data 是一个元祖,第一个元素是对方发送的数据,第二个元素是对方的ip和端口
+# print(recv_data[0].decode())
+# print(recv_data[1])
+# # 关闭套接字
+# s.close()
